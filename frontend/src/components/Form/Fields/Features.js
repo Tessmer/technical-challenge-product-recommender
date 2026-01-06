@@ -16,7 +16,7 @@ function Features({ features, selectedFeatures = [], onFeatureChange }) {
   return (
     <div className="mb-4">
       <h2 className="text-lg font-bold mb-2">Funcionalidades:</h2>
-      <ul className="max-h-[150px] overflow-y-auto mb-2">
+      <ul className="max-h-[168px] overflow-y-auto mb-2">
         {features.map((feature, index) => (
           <li key={index} className="mb-2">
             <Checkbox

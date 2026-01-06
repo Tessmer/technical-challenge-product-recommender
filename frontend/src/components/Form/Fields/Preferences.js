@@ -23,7 +23,7 @@ function Preferences({
   return (
     <div className="mb-4">
       <h2 className="text-lg font-bold mb-2">Preferências:</h2>
-      <ul className="max-h-[150px] overflow-y-auto mb-2">
+      <ul className="max-h-[168px] overflow-y-auto mb-2">
         {preferences.map((preference, index) => (
           <li key={index} className="mb-2">
             <Checkbox
