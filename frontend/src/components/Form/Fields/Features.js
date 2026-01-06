@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Checkbox from '../../shared/Checkbox';
 
 function Features({ features, selectedFeatures = [], onFeatureChange }) {
-  const [currentFeatures, setCurrentFeatures] = useState(selectedFeatures)
+  const [currentFeatures, setCurrentFeatures] = useState(selectedFeatures);
 
   const handleFeatureChange = (feature) => {
     const updatedFeatures = currentFeatures.includes(feature)
@@ -16,7 +16,7 @@ function Features({ features, selectedFeatures = [], onFeatureChange }) {
   return (
     <div className="mb-4">
       <h2 className="text-lg font-bold mb-2">Funcionalidades:</h2>
-      <ul>
+      <ul className="max-h-[150px] overflow-y-auto mb-2">
         {features.map((feature, index) => (
           <li key={index} className="mb-2">
             <Checkbox
@@ -24,6 +24,7 @@ function Features({ features, selectedFeatures = [], onFeatureChange }) {
               checked={currentFeatures.includes(feature)}
               onChange={() => handleFeatureChange(feature)}
               className="text-green-500"
+              data-testid={`checkbox-${feature}`}
             >
               {feature}
             </Checkbox>

@@ -7,14 +7,18 @@ function RecommendationType({ onRecommendationTypeChange }) {
       <h2 className="text-lg font-bold mb-2">Tipo de Recomendação:</h2>
       <div className="flex items-center">
         <Checkbox
+          data-testid="radio-SingleProduct"
           type="radio"
           name="recommendationType"
           value="SingleProduct"
           onChange={() => onRecommendationTypeChange('SingleProduct')}
           className="mr-2"
         />
-        <label htmlFor="SingleProduct" className="mr-4">Produto Único</label>
+        <label htmlFor="SingleProduct" className="mr-4">
+          Produto Único
+        </label>
         <Checkbox
+          data-testid="radio-MultipleProducts"
           type="radio"
           name="recommendationType"
           value="MultipleProducts"
